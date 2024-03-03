@@ -33,24 +33,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: SplashScreen(),
+      
     );
   }
 }
 
-class SplashScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('package:myapp/app-design/splash.dart'),
-            fit: BoxFit.cover,
-        
-        ),
-      ),
-    ),
-    );
-  }
-}
 

@@ -3,8 +3,9 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
+import 'package:myapp/operations.dart';
 
-class Scene extends StatelessWidget {
+class getStarted extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double baseWidth = 375;
@@ -71,7 +72,9 @@ class Scene extends StatelessWidget {
                 ],
               ),
             ),
+            
             Container(
+              
               // btnprimary2Az (3:21)
               margin: EdgeInsets.fromLTRB(36*fem, 0*fem, 36*fem, 0*fem),
               width: double.infinity,
@@ -80,6 +83,13 @@ class Scene extends StatelessWidget {
                 color: Color(0xff5c40cc),
                 borderRadius: BorderRadius.circular(17*fem),
               ),
+              child: GestureDetector(
+          onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => onboarding1()),
+                );
+             },
               child: Center(
                 child: Text(
                   'Get Started',
@@ -93,6 +103,7 @@ class Scene extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
             ),
           ],
         ),
